@@ -1,0 +1,17 @@
+{
+    "name": "日大填体温",
+    "description": "日大填体温辅助",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["tabs"],
+    "content_scripts": [
+        {
+          "matches": ["*://condition.nihon-u.ac.jp/Student/Consent"],
+          "js": ["js/policy.js"]
+        },
+        {
+            "matches": ["*://condition.nihon-u.ac.jp/Student/Input"],
+            "js": ["js/input_value.js"]
+        }
+    ]
+}
